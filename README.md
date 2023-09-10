@@ -2,6 +2,9 @@
 
 This repository contains my solution to the Multi-Step Form coding challenge from Frontend Mentor.
 
+![Design preview for the Multi-step form coding challenge](./design/desktop-preview.jpg)
+
+
 ## Challenge Description
 The Multi-Step Form coding challenge is a frontend development challenge that involves creating a multi-step form using various technologies and frameworks such as React, React Router, Sass/SCSS, TypeScript, and Redux Toolkit. The challenge requires designing and implementing an interactive form with multiple steps, allowing users to enter and submit information in a structured manner.
 
