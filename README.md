@@ -1,27 +1,42 @@
-# React + TypeScript + Vite
+# Multi-Step Form Coding Challenge
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains my solution to the Multi-Step Form coding challenge from Frontend Mentor.
 
-Currently, two official plugins are available:
+![Design preview for the Multi-step form coding challenge](./src/design/desktop-preview.jpg)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+## Challenge Description
+The Multi-Step Form coding challenge is a frontend development challenge that involves creating a multi-step form using various technologies and frameworks such as React, React Router, Sass/SCSS, TypeScript, and Redux Toolkit. The challenge requires designing and implementing an interactive form with multiple steps, allowing users to enter and submit information in a structured manner.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- You can see a live demo of the Multi-Step Form solution[here](https://effervescent-beijinho-33f63f.netlify.app/)
 
-- Configure the top-level `parserOptions` property like this:
+## Technologies Used
+- react/react router
+- typescript
+- -sass/scss
+- redux/reduxtolkit
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+## Features
+- User-friendly multi-step form interface
+- Form validation for each step
+- Error messaging for invalid inputs
+- Progress indicator to track the current step
+- Navigation buttons for moving between steps
+- Responsive design for mobile and desktop screens
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
+
+Feedback and Improvements
+I welcome any feedback or suggestions for improving the solution. If you have any ideas or recommendations, please feel free to open an issue or submit a pull request.
+
+License
+This project is licensed under the MIT License.
+
+Acknowledgments
+I would like to thank Frontend Mentor for providing this coding challenge and giving me the opportunity to enhance my frontend skills.
+
+If you have any further questions or inquiries, please feel free to contact me.
+
+Thank you!
+
+Feel free to copy and paste the above content into your README.md file. Don't forget to replace any placeholder values with the relevant information about your project and update the necessary sections accordingly.
