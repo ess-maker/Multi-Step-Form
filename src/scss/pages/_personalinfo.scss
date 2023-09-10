@@ -1,0 +1,28 @@
+@use "../abstracts" as c;
+@use "../base" as b ;
+
+.Personal_info {
+    padding: 3rem 5rem;
+    .Personal_titel {
+        @include b.title();
+    }
+    .Personal_discrption {
+        @include b.discrption();
+    }
+}
+
+@media screen and (max-width: 1700px) {
+    .Personal_info {
+        padding: 3rem;
+        background-color: white;
+        border-radius: 1rem;
+        margin: -3rem 1.5rem 0;
+        
+        input[type="submit"] {
+            position: absolute;
+            bottom: 2rem;
+            right: 3rem;
+            margin: 0 !important;
+        }
+    }
+}

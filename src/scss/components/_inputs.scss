@@ -1,0 +1,47 @@
+@use "../abstracts" as c;
+
+.input-titel {
+    display: inline-flex;
+    justify-content: space-between;
+    margin-bottom: .30rem;
+    width: 100%;
+    
+    label {
+        color:map-get(c.$colors,form-color , Marine_blue ) ;
+        font-size: 1rem;
+        font-weight: 400;
+    }
+    p {
+        font-size: 1.1rem;
+    font-weight: 600;
+    color:map-get(c.$colors,form-color ,Strawberry_red) ;
+
+
+    }
+}
+input[type = "text"],
+input[type = "email"] {
+    display: block;
+    margin-top: 0.4rem;
+    width:calc(100% - 1rem);
+    padding: 1rem;
+    font-size: 1.2rem;
+    border: 1px solid map-get(c.$colors, form-color , Cool_gray );
+    border-radius: 0.8rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    &::placeholder {
+        color:map-get(c.$colors, form-color , Cool_gray) ;
+    }
+}
+
+input[type = "submit"] {
+color:map-get(c.$colors, form-color , Alabaster) ;
+    padding: 1rem 1.5rem;
+    font-weight: 500;
+    border-radius: 16px;
+    font-size: 1.2rem;
+    width: fit-content;
+    border: none;
+    cursor: pointer;
+}

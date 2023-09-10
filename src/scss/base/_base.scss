@@ -1,0 +1,29 @@
+@use "../abstracts" as c;
+
+@mixin title {
+    color:map-get(c.$colors,form-color , Marine_blue ) ;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+    font-weight: 700;
+}
+
+@mixin discrption {
+     color: map-get(c.$colors,form-color , Cool_gray);
+     text-transform: capitalize;
+     font-weight: 500;
+     font-size: 1.2800rem;
+     margin-bottom: 2rem;
+     line-height: 1.7;
+ }
+
+ @mixin goback {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: map-get(c.$colors,form-color , Cool_gray);
+    &:hover {
+        color: map-get(c.$colors,form-color , Marine_blue );
+    }
+    transition: .5s ease-in-out;
+
+ }

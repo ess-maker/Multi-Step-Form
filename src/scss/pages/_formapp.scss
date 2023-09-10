@@ -1,0 +1,90 @@
+@use "../abstracts" as c;
+.form_app {
+    background-color:map-get(c.$colors,form-color , Alabaster ) ;
+    height:80vh;
+    width: 55%;
+    display: flex;
+    border-radius: 20px;
+    box-shadow: 4px 3px 27px 0px #f1f1f1;
+    .form_steps {
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 1rem 0rem 1rem 1rem;
+        .form_step {
+            display: flex;
+            align-items: center;
+            margin: 2rem;
+            gap: 1rem;
+            .form_number {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 3rem;
+                height: 3rem;
+                border-radius: 50%;
+                font-weight: 700;
+                cursor: pointer;
+                color:map-get(c.$colors,form-color , Alabaster ) ;
+                border: 1px solid map-get(c.$colors,form-color , Alabaster );
+                font-size: 1.2rem;
+            }
+            .active {
+        color: map-get(c.$colors,form-color , Marine_blue ) !important;
+        background-color:map-get(c.$colors,form-color , Light_blue ) !important;
+            }
+            @media  screen and (max-width:1700px) {
+                .form_content {
+                    display: none;
+                }
+
+            }
+            .form-titel {
+                color:map-get(c.$colors,form-color , Light_gray ) ;
+                font-size: .9rem;
+                letter-spacing: 1.5px;
+                margin-bottom: .2rem;
+                line-height: 1.5;
+                font-weight: 400;
+            }
+            .form-discrption {
+                font-weight: bold;
+                color:map-get(c.$colors,form-color ,Alabaster) ;
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1700px) {
+    .form_app {
+        flex-direction: column;
+        background-color: transparent;
+        width: 100%;
+        .form_steps {
+            background-image: url('../../assets/bg-sidebar-mobile.svg');
+            height: 16vh;
+            width: 100%;
+            display: flex;
+            align-items: start;
+            justify-content: center;
+            padding-top: 2rem;
+            margin: 0;
+            .form_step {
+                margin: .5rem !important
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1700px) {
+    .form_app {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50% , -50%);
+        .form_steps {
+            width: 20rem;
+            background-image: url('../../assets/bg-sidebar-desktop.svg');
+        }
+    }
+  }

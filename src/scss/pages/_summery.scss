@@ -1,0 +1,101 @@
+@use "../abstracts" as c;
+@use "../base" as b ;
+.Summery {
+    padding: 3rem 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: calc(100% - 20rem);
+
+    .Summery_titel {
+        @include b.title();
+    }
+
+    .Summery_discrption{
+        @include b.discrption();
+    }
+
+    .Summery_check {
+        padding: 1rem;
+    background-color: map-get(c.$colors,form-color , Magnolia );
+    border-radius: 0.5rem;
+
+.Summery_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1.5rem;
+    border-bottom: solid 1px map-get(c.$colors,form-color ,Light_gray) ;
+    
+.Summery_box {
+
+            .Summery_chosen {
+font-size: 1.2rem;
+    font-weight: 600;
+    color:map-get(c.$colors,form-color , Marine_blue ) ;
+    margin-bottom: .3rem;
+            }
+
+            .Summery_change {
+                text-decoration: underline;
+                color:map-get(c.$colors,form-color ,Light_gray ) ;
+                font-weight: 400;
+                transition: .3s ease-out;
+                &:hover {
+                    color:map-get(c.$colors,form-color ,Purplish_blue) ;
+                }
+            }
+        }
+        .Summery_price {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color:map-get(c.$colors,form-color , Marine_blue) ;
+
+        }
+    }
+
+    .Summery_element {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: .7rem;
+        h4 {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color:map-get(c.$colors,form-color ,Light_gray ) ;
+        }
+        p {
+            color:map-get(c.$colors,form-color ,Marine_blue) ;
+            font-weight: 400;
+        }
+    }    
+}
+.Total {
+    padding: 3rem 1rem 0  ;
+margin-bottom: 6rem;
+
+.Summery_Total {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: map-get(c.$colors,form-color , Light_gray ) ;
+}
+.Total_price {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: map-get(c.$colors,form-color , Purplish_blue ) ;
+    float: right;
+}
+}
+}
+
+@media screen and (max-width: 1700px) {
+    .Summery {
+        padding: 2rem;
+        background-color: white;
+        border-radius: 1rem;
+        margin: -5rem auto;
+        .add_box {
+            padding: 1rem;
+        }
+    }
+}

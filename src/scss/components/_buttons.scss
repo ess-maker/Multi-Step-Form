@@ -1,0 +1,32 @@
+@use "../base" as b ;
+@use "../abstracts" as c;
+
+
+.bg-confirem {
+background-color: map-get(c.$colors ,form-color , Purplish_blue );
+}
+.bg-next {
+    background-color:map-get(c.$colors, form-color , Marine_blue);
+}
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    .back {
+        @include b.goback;
+    }
+    .next {
+    }
+}
+
+@media screen and (max-width: 1700px) {
+    .buttons{
+        position: absolute;
+        bottom: -1rem;
+        left: 0;
+        background-color: white;
+        width:calc(100% - 2rem);
+        padding: 1.5rem;
+    }
+}

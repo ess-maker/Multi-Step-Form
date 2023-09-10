@@ -1,0 +1,123 @@
+@use "../abstracts" as c;
+@use "../base" as b ;
+.add {
+    padding: 3rem 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: calc(100% - 20rem);
+  
+    .add-titel {
+      @include b.title();
+    }
+  
+    .add-discrption {
+      @include b.discrption();
+    }
+  
+    .bottom {
+      margin-bottom: 1.2rem;
+    }
+  
+    .add_container {
+      margin-bottom: 8rem;
+  
+      .add_box {
+        cursor: pointer;
+        display: flex;
+        width: calc(100% - 2rem);
+        align-items: center;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border: 1px solid hsl(231, 11%, 63%);
+  
+        input[type="checkbox"] {
+          appearance: none;
+  
+          & + label {
+            cursor: pointer;
+            position: relative;
+            padding-left: 3.5rem;
+  
+            &:before {
+              content: "";
+              width: 1.5rem;
+              height: 1.5rem;
+              outline: 1px solid map-get(c.$colors, form-color, Cool_gray);
+              accent-color: map-get(c.$colors, form-color, Purplish_blue);
+              background-color: transparent;
+              border-radius: 0.2rem;
+              position: absolute;
+              top: 0;
+              left: 0;
+            }
+  
+            &:after {
+              content: "";
+              background-image: url(/src/assets/icon-checkmark.svg);
+              background-size: 23px 21px;
+              background-repeat: no-repeat;
+              width: 1.5rem;
+              height: 1.5rem;
+              position: absolute;
+              background-color: hsl(243, 100%, 62%);
+              border-radius: 0.3rem;
+              top: 0;
+              left: 0;
+              transition: 0.5s;
+              display: none;
+              transition: .5s opacity;
+            }
+  
+            &:hover {
+              border-color: white;
+            }
+          }
+        }
+  
+        .add_box-content {
+          .add_box_titel {
+            font-weight: 700;
+            color: map-get(c.$colors, form-color, Marine_blue);
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+          }
+  
+          .add_box_discrption {
+            font-size: 1.1rem;
+            color: map-get(c.$colors, form-color, Cool_gray);
+          }
+        }
+  
+        .add_box_price {
+          margin-left: auto;
+          color: hsl(243, 100%, 62%);
+          font-weight: 500;
+          font-size: 1.1rem;
+        }
+      }
+  
+      .selected {
+        border: 2px solid map-get(c.$colors, form-color, Purplish_blue) !important;
+  
+        input[type="checkbox"] + label {
+          &:after {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+  
+  @media screen and (max-width: 1700px) {
+    .add {
+      padding: 2rem;
+      background-color: white;
+      border-radius: 1rem;
+      margin: -5rem auto;
+  
+      .add_box {
+        padding: 1rem;
+      }
+    }
+  }
