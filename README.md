@@ -2,7 +2,7 @@
 
 This repository contains my solution to the Multi-Step Form coding challenge from Frontend Mentor.
 
-![Design preview for the Multi-step form coding challenge](./design/desktop-preview.jpg)
+![Design preview for the Multi-step form coding challenge](./src/design/desktop-preview.jpg)
 
 
 ## Challenge Description
