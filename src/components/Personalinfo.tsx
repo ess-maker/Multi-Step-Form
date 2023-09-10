@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import Buttons from "./Buttons";
 
 
-const Personalinfo = () => {
+const Personalinfo = async () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [emailError, setEmailError] = useState("");
@@ -18,6 +18,22 @@ const Personalinfo = () => {
     email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
     phoneNumber: /^[0-9\s]+$/
   };
+  const url = 'https://dungy-amazon-data-scraper.p.rapidapi.com/products/B08N5R2GQW';
+  const options = {
+    method: 'GET',
+    headers: {
+      'X-RapidAPI-Key': 'ef5354eabemsh7c701fef27777d8p18a2f0jsneee68404b61d',
+      'X-RapidAPI-Host': 'dungy-amazon-data-scraper.p.rapidapi.com'
+    }
+  };
+  
+  try {
+    const response = await fetch(url, options);
+    const result = await response.text();
+    console.log(result);
+  } catch (error) {
+    console.error(error);
+  }
 
   const navigate = useNavigate();
 

@@ -32,7 +32,7 @@
         color: map-get(c.$colors,form-color , Marine_blue ) !important;
         background-color:map-get(c.$colors,form-color , Light_blue ) !important;
             }
-            @media  screen and (max-width:1700px) {
+            @media  screen and (max-width:901px) {
                 .form_content {
                     display: none;
                 }
