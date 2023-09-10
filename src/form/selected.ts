@@ -5,7 +5,7 @@ const selected = createSlice({
 name: 'selected',
 initialState:plans[0],
 reducers: {
-    select:(state , action) => {
+    select:(_state , action): any => {
         return action.payload;
     }
 }
